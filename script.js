@@ -88,6 +88,7 @@ function clearAll(){
   for(let i = 0; i< x.length; i++){
      x[i].style.backgroundColor = "white";
    }
+
 }
 
 function fillU(){
@@ -98,3 +99,33 @@ function fillU(){
      }
    }
 }
+
+//a fun extra surpise
+function surprise(){
+  if(numCols > 0 || numRows > 0){
+    while(numCols>0){
+      removeC();
+      }
+    while(numRows>0){
+      removeR();
+        }
+  }
+  for(let i = 0; i< 6; i++){
+    addR();
+    addC();
+    }
+  const holder = colorSelected;
+  colorSelected = "yellow"
+  fill();
+  let x = document.getElementById("grid").getElementsByTagName("td");
+  x[0].style.backgroundColor = "blue";
+  x[6].style.backgroundColor = "blue";
+  x[9].style.backgroundColor = "blue";
+  x[11].style.backgroundColor = "blue";
+  x[22].style.backgroundColor = "blue";
+  x[26].style.backgroundColor = "blue";
+  x[30].style.backgroundColor = "blue";
+  x[31].style.backgroundColor = "blue";
+  x[32].style.backgroundColor = "blue";
+  colorSelected = holder;
+  }
