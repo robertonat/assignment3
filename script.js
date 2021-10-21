@@ -42,7 +42,12 @@ function addC() {
 
 //Remove a row
 function removeR() {
-    alert("Clicked Remove Row")
+  //if the table is already empty do nothing.
+  if(numRows == 0){
+    return;
+  }
+  numRows = numRows-1;
+  document.getElementById("grid").deleteRow(numRows);
 }
 //Remove a column
 function removeC() {
