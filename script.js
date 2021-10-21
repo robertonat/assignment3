@@ -40,7 +40,7 @@ function addC() {
     let row = table.insertRow();
     let cell1 = row.insertCell();
     fillCell(cell1);
-    numRows =1;
+    numRows = 1;
     return
     }
   //iterate through each row and add one cell each to creat a new column
@@ -59,23 +59,34 @@ function removeR() {
   }
   numRows = numRows-1;
   document.getElementById("grid").deleteRow(numRows);
-  if(numRows == 0){numCols = 0;}
+  if(numRows <= 0){
+    numCols = 0;
+    numRows = 0;
+  }
 }
 //Remove a column
 function removeC() {
-  if(numCols == 0){
+  numCols = numCols-1;
+
+  if(numCols <= 0){
+    while(numRows>0){
+      numRows = numRows-1;
+      document.getElementById("grid").deleteRow(numRows);
+    }
+    numRows = 0;
+    numCols = 0;
     return;
   }
-  numCols = numCols-1;
+
   let table = document.getElementById("grid");
   for(let i = 0; i< numRows; i++){
       let row = table.rows[i];
-      row.deleteCell(numCols);
+      row.deleteCell(0);
     }
-    if(numCols == 0){
-      numRows = 0;
-    }
+
+
 }
+
 //sets global var for selected color
 function selected(){
     colorSelected = document.getElementById("selectedID").value;
