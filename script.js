@@ -58,6 +58,7 @@ function removeR() {
   }
   numRows = numRows-1;
   document.getElementById("grid").deleteRow(numRows);
+  if(numRows == 0){numCols = 0;}
 }
 //Remove a column
 function removeC() {
@@ -69,6 +70,9 @@ function removeC() {
   for(let i = 0; i< numRows; i++){
       let row = table.rows[i];
       row.deleteCell(numCols);
+    }
+    if(numCols == 0){
+      numRows = 0;
     }
 }
 //sets global var for selected color
