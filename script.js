@@ -81,5 +81,10 @@ function clearAll(){
 }
 
 function fillU(){
-    alert("Clicked Fill All Uncolored")
+  let x = document.getElementById("grid").getElementsByTagName("td");
+  for(let i = 0; i< x.length; i++){
+     if(x[i].style.backgroundColor == "white"){
+        x[i].style.backgroundColor = colorSelected;
+     }
+   }
 }
