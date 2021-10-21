@@ -1,11 +1,26 @@
 let numRows = 0;
 let numCols = 0;
-let colorSelected; 
+let colorSelected;
 
 //Add a row
 function addR() {
-    alert("Clicked Add Row")
+  numRows = numRows+1;
+  let table = document.getElementById("grid");
+  let row = table.insertRow();
+
+  //code block for initlizing a table for the first time.
+  if(numCols == 0){
+    let cell1 = row.insertCell();
+    numCols = 1;
+    return
+    }
+  else{
+    for(let i = 0; i< numCols; i++){
+      let cell1 = row.insertCell(i);
+      }
+    }
 }
+
 //Add a column
 function addC() {
     alert("Clicked Add Col")
