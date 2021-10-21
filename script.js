@@ -74,7 +74,10 @@ function fill(){
 }
 
 function clearAll(){
-    alert("Clicked Clear All")
+  let x = document.getElementById("grid").getElementsByTagName("td");
+  for(let i = 0; i< x.length; i++){
+     x[i].style.backgroundColor = "white";
+   }
 }
 
 function fillU(){
