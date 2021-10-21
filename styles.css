@@ -1,9 +1,18 @@
 tr,td{
     border:1px;
     border-style: solid;
+    position: relative;
+    left: 45px;
+    top: 25px;
 }
 td{
     height: 50px;
     width: 50px;
     background-color: white;
+}
+
+body{
+    font-family: verdana;
+    background-image: url("Chalkboard-Background.png");
+    background-size: cover;
 }
