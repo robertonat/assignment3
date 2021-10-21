@@ -23,7 +23,21 @@ function addR() {
 
 //Add a column
 function addC() {
-    alert("Clicked Add Col")
+  numCols = numCols+1;
+  let table = document.getElementById("grid");
+
+  //code block for initlizing a table for the first time.
+  if(numRows == 0){
+    let row = table.insertRow();
+    let cell1 = row.insertCell();
+    numRows =1;
+    return
+    }
+
+  for(let i = 0; i< numRows; i++){
+      let row = table.rows[i];
+      let cell1 = row.insertCell();
+    }
 }
 
 //Remove a row
