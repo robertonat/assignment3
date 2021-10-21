@@ -2,6 +2,12 @@ let numRows = 0;
 let numCols = 0;
 let colorSelected;
 
+//function for initilizing onclick and cell color to clean up code
+function fillCell(cell1){
+  cell1.style.backgroundColor = "white";
+  cell1.setAttribute("onclick","this.style.backgroundColor = colorSelected");
+};
+
 //Add a row
 function addR() {
   numRows = numRows+1;
@@ -11,12 +17,14 @@ function addR() {
   //code block for initlizing a table for the first time.
   if(numCols == 0){
     let cell1 = row.insertCell();
+    fillCell(cell1);
     numCols = 1;
     return
     }
   else{
     for(let i = 0; i< numCols; i++){
       let cell1 = row.insertCell(i);
+      fillCell(cell1);
       }
     }
 }
@@ -30,6 +38,7 @@ function addC() {
   if(numRows == 0){
     let row = table.insertRow();
     let cell1 = row.insertCell();
+    fillCell(cell1);
     numRows =1;
     return
     }
@@ -37,6 +46,7 @@ function addC() {
   for(let i = 0; i< numRows; i++){
       let row = table.rows[i];
       let cell1 = row.insertCell();
+      fillCell(cell1);
     }
 }
 
