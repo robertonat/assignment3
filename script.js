@@ -51,12 +51,19 @@ function removeR() {
 }
 //Remove a column
 function removeC() {
-    alert("Clicked Remove Col")
+  if(numCols == 0){
+    return;
+  }
+  numCols = numCols-1;
+  let table = document.getElementById("grid");
+  for(let i = 0; i< numRows; i++){
+      let row = table.rows[i];
+      row.deleteCell(numCols);
+    }
 }
 //sets global var for selected color
 function selected(){
     colorSelected = document.getElementById("selectedID").value;
-    console.log(colorSelected);
 }
 
 function fill(){
