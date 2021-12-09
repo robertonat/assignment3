@@ -1,27 +1,44 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Grid</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <button onclick="addR()">Add Row</button>
-    <button onclick="addC()">Add Col</button>
-    <button onclick="removeR()">Remove Row</button>
-    <button onclick="removeC()">Remove Col</button>
-    <button onclick="fillU()">Fill All Uncolored</button>
-    <button onclick="fill()">Fill All</button>
-    <button onclick="clearAll()">Clear</button>
-    <button onclick="surprise()">press for a surprise</button>
-    <select onchange="selected()" id="selectedID">
-        <option value="SELECT">SELECT</option>
-        <option value="Red">Red</option>
-        <option value="Blue">Blue</option>
-        <option value="Green">Green</option>
-        <option value="Yellow">Yellow</option>
-    </select>
-    <table id="grid">
-    </table>
+  <head>
+    <script src="d3.v3.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="script.js"></script>
-</body>
+    <title>Listing of social services</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class=>Listing of social services</h1>
+        <h2 class=>Enter a search term to find resources</h2>
+
+        <form id="form">
+          <input class="form-control" id="user-input" placeholder="Enter search term">
+          <button id="button" class="btn btn-secondary">Search</button>
+        </form>
+
+  <table class="table" cellpadding="10">
+    <thead>
+      <tr>
+      <th scope="col">NTA</th>
+      <th scope="col">boro</th>
+      <th scope="col">zip</th>
+      <th scope="col">address</th>
+      <th scope="col">phone</th>
+      <th scope="col">additional information</th>
+      <th scope="col">tag</th>
+      <th scope="col">source</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      </div>
+        </div>
+          </div>
+
+  </body>
+    <p style="font-size:70%;">All data was collected at <a href="https://opendata.cityofnewyork.us/"> Open data NYC</a>. Data was modified in order to fit this sites schema.</p>
 </html>
